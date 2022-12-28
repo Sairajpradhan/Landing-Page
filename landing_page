@@ -1,0 +1,600 @@
+---------------------------------Index.html-----------------------------------------
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Shoe Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="container spacing">
+      <h1 class="primary-title">Need something best, just buy PUMA </h1>
+      <p>Puma is sneaker addict-owned for its retro style and athletic-infused appearance</p>
+      <a href="#" class="btn">Explore Shoes</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="featured">
+      <div class="container">
+        <h2 class="section-title">Featured products</h2>
+        <div class="split">
+          <a href="#" class="featured__item">
+            <img src="img/shoe-4.png" alt="" class="featured__img">
+            <p class="featured__details"><span class="price">2999/-</span>shoe name</p>
+          </a>
+          <a href="#" class="featured__item">
+            <img src="img/shoe-5.png" alt="" class="featured__img"><br>
+            <p class="featured__details"><span class="price">3499/-</span>shoe name</p>
+          </a>
+          <a href="#" class="featured__item">
+            <img src="img/shoe-6.png" alt="" class="featured__img">
+            <p class="featured__details"><span class="price">3999/-</span>shoe name</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="our-products">
+      <div class="container">
+        <h2 class="section-title">Our products</h2>
+
+        <article class="product shoe-red spacing">
+          <img src="img/shoe-1.png" alt="" class="product__image">
+          <h3 class="product__title">VANS BROWN CLASSIC</h3>
+          <p class="product__description">Fashion is not just something you put on. It is something that expresses who you are, what others see in you, and how they will feel being in your presence!</p>
+          <a href="" class="btn">Buy now</a>
+        </article>
+
+        <article class="product shoe-white shoe-left spacing">
+          <img src="img/shoe-2.png" alt="" class="product__image">
+          <h3 class="product__title">VANS WHITE CLASSIC</h3>
+          <p class="product__description">Summer is the only time I wear white sneakers. Shout out to the white-wearing summer season!</p>
+          <a href="" class="btn">Buy now</a>
+        </article>
+
+        <article class="product shoe-blue spacing">
+          <img src="img/shoe-3.png" alt="" class="product__image">
+          <h3 class="product__title">VANS PREMIUM CLASSIC</h3>
+          <p class="product__description">Puma brings you the most incredible new styles and advances in technology to make sure you can go the extra mile, mile after mile. #Runhappy!</p>
+          <a href="" class="btn">Buy now</a>
+        </article>
+        
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>
+
+
+
+
+--------------------------------------------------------main.css------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif ;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+section {
+  padding: 7em 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+.split {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.split > * {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  min-width: 15em;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-text, #fff);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  padding: .5em 1.25em;
+  background: var(--clr-accent, blue);
+  border-radius: .25em;
+  -webkit-transition: opacity 250ms linear,
+ -webkit-transform 250ms ease-in-out;
+  transition: opacity 250ms linear,
+ -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out,
+ opacity 250ms linear;
+  transition: transform 250ms ease-in-out,
+ opacity 250ms linear,
+ -webkit-transform 250ms ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: .9;
+}
+
+.primary-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+  line-height: 1;
+  color: #17353d;
+  margin-bottom: 5rem;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+  padding: 15em 0;
+  background: #222;
+}
+
+@supports (background-blend-mode: multiply) {
+  .hero {
+    background: url(../img/shoe-3.png), radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.featured {
+  background: #eee;
+}
+
+.featured__item {
+  display: block;
+  position: relative;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.featured__item:hover, .featured__item:focus {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.featured__item:hover .featured__details, .featured__item:focus .featured__details {
+  opacity: 1;
+  text-shadow: 0 0 2em white;
+}
+
+.featured__item::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  padding: 75% 75% 0 0;
+  border-radius: 50%;
+  background: #2193b0;
+  z-index: -1;
+}
+
+.featured__details {
+  opacity: 0;
+  -webkit-transition: opacity 250ms linear;
+  transition: opacity 250ms linear;
+}
+
+.featured__details span {
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.product {
+  background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple));
+  padding: 3em;
+  border-radius: 1em;
+  margin-bottom: 5em;
+  text-align: center;
+}
+
+.product__title {
+  font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+  text-transform: uppercase;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+}
+
+.product__image {
+  margin: -5em 0 0 0;
+}
+
+@media (min-width: 45em) {
+  .product {
+    text-align: left;
+    margin-bottom: 9em;
+  }
+  .product__title {
+    margin: 0;
+  }
+  .product__image {
+    float: right;
+    width: 65%;
+    shape-outside: url(../img/shoe-1.png);
+    shape-margin: 1em;
+    margin: 0 -5em 0 0;
+  }
+  .product.shoe-left .product__image {
+    float: left;
+    shape-outside: url(../img/shoe-2.png);
+    margin: 0 0 0 -5em;
+    shape-margin: 2em;
+  }
+}
+
+.hero {
+  --clr-accent: #faa700;
+}
+
+.shoe-red {
+  --clr-inner: #faa700;
+  --clr-outer: #e48d00;
+  --clr-accent: #a1173c;
+}
+
+.shoe-white {
+  --clr-inner: #fce4b3;
+  --clr-outer: #eac886;
+  --clr-accent: #2f4858;
+}
+
+.shoe-blue {
+  --clr-inner: #6dd5ed;
+  --clr-outer: #2193b0;
+  --clr-accent: #008951;
+}
+
+/*# sourceMappingURL=main.css.map */
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------main.css.map--------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+{
+    "version": 3,
+    "mappings": "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",
+    "sources": [
+        "../scss/main.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------main.scss-----------------------------------------------------------------------
+
+
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+section {
+  padding: 7em 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+.split {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &>* {
+    flex-basis: 30%;
+    min-width: 15em;
+  }
+}
+
+.spacing>*+* {
+  margin-top: var(--spacer, 2rem)
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-text, #fff);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  padding: .5em 1.25em;
+  background: var(--clr-accent, blue);
+  border-radius: .25em;
+  transition:
+    transform 250ms ease-in-out,
+    opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: .9;
+}
+
+.primary-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+  line-height: 1;
+  color: #17353d;
+  margin-bottom: 5rem;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+  padding: 15em 0;
+  background: #222;
+
+  @supports (background-blend-mode: multiply) {
+    background: url(../img/shoe-3.png),
+      radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.featured {
+  background: #eee;
+
+  &__item {
+    display: block;
+    position: relative;
+    transform: scale(.85);
+    transition: transform 250ms ease-in-out;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+
+
+
+    &:hover,
+    &:focus {
+      transform: scale(1);
+
+      .featured__details {
+        opacity: 1;
+        text-shadow: 0 0 2em rgba(#fff, 1)
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      padding: 75% 75% 0 0;
+      border-radius: 50%;
+      background: #2193b0;
+      z-index: -1;
+    }
+  }
+
+  &__details {
+    opacity: 0;
+    transition: opacity 250ms linear;
+
+    span {
+      display: block;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.product {
+  background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple));
+  padding: 3em;
+  border-radius: 1em;
+  margin-bottom: 5em;
+  text-align: center;
+
+  &__title {
+    font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 0 .2em rgba(#000, .2);
+  }
+
+  &__image {
+    margin: -5em 0 0 0;
+  }
+
+  @media (min-width: 45em) {
+    text-align: left;
+    margin-bottom: 9em;
+
+    &__title {
+      margin: 0;
+    }
+
+    &__image {
+      float: right;
+      width: 65%;
+      // outline: 2px solid red;
+      shape-outside: url(../img/shoe-1.png);
+      shape-margin: 1em;
+      margin: 0 -5em 0 0;
+    }
+
+    &.shoe-left {
+      .product__image {
+        float: left;
+        shape-outside: url(../img/shoe-2.png);
+        margin: 0 0 0 -5em;
+        shape-margin: 2em;
+      }
+    }
+  }
+}
+
+.hero {
+  --clr-accent: #faa700;
+}
+
+.shoe-red {
+  --clr-inner: #faa700;
+  --clr-outer: #e48d00;
+  --clr-accent: #a1173c;
+}
+
+.shoe-white {
+  --clr-inner: #fce4b3;
+  --clr-outer: #eac886;
+  --clr-accent: #2f4858;
+}
+
+.shoe-blue {
+  --clr-inner: #6dd5ed;
+  --clr-outer: #2193b0;
+  --clr-accent: #008951;
+}
