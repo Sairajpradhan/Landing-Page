@@ -57,7 +57,7 @@ DOCTYPE html>
         <h3> <span> qualification : </span> Btech </h3>
         <h3> <span> post : </span>Full Stack Web developer </h3>
         <h3> <span> language : </span> English Hindi odia</h3>
-        <a href="file:///C:/Users/ananya/Downloads/Digvijaya_resume.pdf"><button class="btn"> download CV <i class="fas fa-download"></i> </button></a>
+        <a href="#"><button class="btn"> download CV <i class="fas fa-download"></i> </button></a>
     </div>
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
